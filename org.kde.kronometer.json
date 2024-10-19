@@ -28,7 +28,12 @@
                         "stable-only": true,
                         "url-template": "https://download.kde.org/stable/kronometer/$version/src/kronometer-$version.tar.xz"
                     }
+                },
+                {
+                    "type": "patch",
+                    "path": "appstream.patch"
                 }
+
             ]
         }
     ]
