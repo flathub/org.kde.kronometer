@@ -1,0 +1,54 @@
+From 37181a385701c092744f7226fdc4286e9aa782ba Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Sabri=20=C3=9Cnal?= <yakushabb@gmail.com>
+Date: Mon, 2 Feb 2026 00:13:44 +0300
+Subject: [PATCH] Fix appdata paper cuts
+
+---
+ desktop/org.kde.kronometer.appdata.xml | 16 +++++++++++++---
+ 1 file changed, 13 insertions(+), 3 deletions(-)
+
+diff --git a/desktop/org.kde.kronometer.appdata.xml b/desktop/org.kde.kronometer.appdata.xml
+index 2db2661..d7b907b 100644
+--- a/desktop/org.kde.kronometer.appdata.xml
++++ b/desktop/org.kde.kronometer.appdata.xml
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <!-- SPDX-FileCopyrightText: 2014 Elvis Angelaccio <elvis.angelaccio_at_kde.org> -->
+ <!-- SPDX-License-Identifier: CC0-1.0 -->
+-<component type="desktop">
+-  <id>org.kde.kronometer.desktop</id>
++<component type="desktop-application">
++  <id>org.kde.kronometer</id>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-2.0+</project_license>
+   <name>Kronometer</name>
+@@ -439,15 +439,25 @@
+       <image width="594" height="242">https://cdn.kde.org/screenshots/kronometer/kronometer.png</image>
+     </screenshot>
+   </screenshots>
+-  <url type="homepage">https://userbase.kde.org/Kronometer</url>
++  <url type="homepage">https://apps.kde.org/kronometer</url>
+   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kronometer</url>
+   <url type="help">https://docs.kde.org/?application=kronometer</url>
++  <url type="vcs-browser">https://invent.kde.org/utilities/kronometer</url>
++  <launchable type="desktop-id">org.kde.kronometer.desktop</launchable>
+   <update_contact>elvis.angelaccio_at_kde.org</update_contact>
++  <developer id="org.kde">
++    <name>KDE</name>
++  </developer>
+   <project_group>KDE</project_group>
+   <provides>
++    <id>org.kde.kronometer.desktop</id>
+     <binary>kronometer</binary>
+   </provides>
++  <replaces>
++    <id>org.kde.kronometer.desktop</id>
++  </replaces>
+   <releases>
++    <release version="2.3.0" date="2022-10-20"/>
+     <release version="2.2.3" date="2019-07-28"/>
+     <release version="2.2.2" date="2019-05-19"/>
+     <release version="2.2.1" date="2018-01-27"/>
+-- 
+2.52.0
+
