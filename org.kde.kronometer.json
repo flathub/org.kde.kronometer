@@ -12,6 +12,10 @@
         "--device=dri",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
+    "cleanup": [
+        "/share/doc",
+        "/share/man"
+    ],
     "modules": [
         {
             "name": "kronometer",
