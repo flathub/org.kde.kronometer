@@ -1,7 +1,7 @@
 {
     "id": "org.kde.kronometer",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-23.08",
+    "runtime-version": "5.15-25.08",
     "sdk": "org.kde.Sdk",
     "command": "kronometer",
     "rename-icon": "kronometer",
@@ -12,10 +12,17 @@
         "--device=dri",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
+    "cleanup": [
+        "/share/doc",
+        "/share/man"
+    ],
     "modules": [
         {
             "name": "kronometer",
             "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+            ],
             "builddir": true,
             "sources": [
                 {
@@ -31,9 +38,8 @@
                 },
                 {
                     "type": "patch",
-                    "path": "appstream.patch"
+                    "path": "fix-appdata.patch"
                 }
-
             ]
         }
     ]
